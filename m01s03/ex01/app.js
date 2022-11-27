@@ -2,7 +2,8 @@ var object = {
   name: 'Alexandru',
   surname: 'Rusovici',
   age: 30,
-  petOwner: false,
+  petOwner: true,
+  carOwner: true,
 };
 
 console.warn(`
@@ -41,3 +42,10 @@ console.log(
     ' ani.'
   ).toString(),
 );
+
+console.warn(`
+Afiseaza fraza “xxx s-a nascut in aaaa.”
+Foloseste tot anul curent pentru a scadea varsta
+`);
+
+console.log(object.name + ' s-a nascut in ' + (2022 - object.age) + '.');
