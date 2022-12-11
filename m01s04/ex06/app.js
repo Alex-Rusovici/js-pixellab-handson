@@ -1,7 +1,7 @@
 var person = {
   name: 'Alexandru',
   surname: 'Rusovici',
-  age: 30,
+  age: 35,
   petOwner: true,
   skills: [
     'html',
@@ -86,6 +86,22 @@ for (var i = 0; i < person.friends.length; i++) {
 }
 console.log(sumAge.toString());
 
+console.warn(`Afiseaza diferenta de varsta dintre persoana si prietenii din arrayul friends
+doar daca aceasta este mai mare de 2 ani. `);
+
+var message = '';
+
+for (i = 0; i < person.friends.length; i++) {
+  var friend = person.friends[i];
+  var AgeDiff = person.age - friend.age;
+
+  if (AgeDiff >= 2) {
+    message += `Intre ${person.name} si ${friend.name} este o diferenta de ${AgeDiff} ani. `;
+  }
+}
+
+console.log(message.trim());
+
 console.warn(`Afiseaza fraza: "Intre Dragos si Larry este o diferenta de xx ani.
 Intre Dragos si Steven... ", doar daca varsta prietenului este impara. .
 `);
@@ -113,3 +129,98 @@ Atentie, va trebui sa numeri invers, de la length la 0.
 for (var i = person.skills.length - 1; i >= 0; i--) {
   console.log(person.skills[i]);
 }
+
+console.warn(
+  `Folosind obiectul person si un for, afiseaza in consola skillurile pe care le are persoana `,
+);
+
+var personSkills = person.skills.length;
+
+for (i = 0; i < personSkills; i++) {
+  console.log(person.skills[i]);
+}
+
+console.warn(`In mod similar, afiseaza skillurile care incep cu c`);
+
+for (i = 0; i < personSkills; i++) {
+  if (person.skills[i].startsWith('c') === true) {
+    console.log(person.skills[i]);
+  }
+}
+
+console.warn(
+  `Folosind un for afiseaza propozitia: "Numele de familie ale prietenilor mei sunt: xxx, xxx, xxx."`,
+);
+
+var message = 'Numele de familie ale prietenilor mei sunt: ';
+
+for (i = 0; i < person.friends.length; i++) {
+  var friend = person.friends[i];
+  var punctuation = ', ';
+
+  if (i === person.friends.length - 1) {
+    punctuation = '.';
+  }
+
+  message += `${friend.surname}${punctuation}`;
+}
+
+console.log(message.trim());
+
+console.warn(
+  `Folosind un for, afiseaza numarul total de ani pe care il au persoanele din arrayul friends `,
+);
+
+var sumAllAges = 0;
+
+for (i = 0; i < person.friends.length; i++) {
+  sumAllAges += person.friends[i].age;
+}
+
+console.log(sumAllAges.toString());
+
+console.warn(
+  `Afiseaza diferenta de varsta dintre persoana si prietenii din arrayul friends. `,
+);
+
+for (i = 0; i < person.friends.length; i++) {
+  var friend = person.friends[i];
+  var diff = person.age - friend.age;
+
+  console.log(diff);
+}
+
+console.warn(
+  `Afiseaza fraza: "Intre Dragos si Larry este o diferenta de xx ani. Intre Dragos si Steven... ". Repeta pentru tot arrayul friends.`,
+);
+
+var message = '';
+
+for (i = 0; i < person.friends.length; i++) {
+  var friend = person.friends[i];
+  var diff = person.age - friend.age;
+
+  message += `Intre ${person.name} si ${friend.name} este o diferenta de ${diff} ani. `;
+}
+
+console.log(message.trim());
+
+console.warn(
+  `Afiseaza fraza “Prietenii mei sunt: xxx yyy, xxx yyy, xxx yyy.” in ordine inversa a arrayului de prieteni. (Numarand de la length la 0).`,
+);
+
+var message = 'Prietenii mei sunt: ';
+
+for (i = person.friends.length - 1; i >= 0; i--) {
+  var friend = person.friends[i];
+  var punctuation = ', ';
+
+  if (i === 0) {
+    punctuation = '.';
+  }
+  message += `${friend.name} ${friend.surname}${punctuation}`;
+}
+
+console.log(message);
+
+// for some reason, inca imi spune ca mai am de facut un exercitiu in care imi spune ca ar trebui chemata valoarea 5976, dar ... am facut toate exercitiile din prezentare

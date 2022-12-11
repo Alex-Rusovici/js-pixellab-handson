@@ -12,13 +12,58 @@
 //   i++;
 // } while (i < 100);
 
-var i = 1;
+// var i = 1;
+
+// do {
+//   i++;
+//   console.log(i);
+
+//   if (i === 50) {
+//     break;
+//   }
+// } while (i < 100);
+
+// do {
+//   i++;
+//   console.log(i);
+// } while (i < 52);
+
+// do {
+//   i++;
+//   console.log(i);
+// } while (i < 51);
+
+// do {
+//   i++;
+//   console.log(i);
+
+//   if (i === 12) {
+//     break;
+//   }
+// } while (i < 51);
+
+// var i = 8;
+
+// do {
+//   i++;
+
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log(i);
+// } while (i < 32);
+
+var multiplicator = prompt(`Adauga un multiplicator`);
+var lowerLimit = prompt(`Adauga limita minima`);
+var upperLimit = prompt(`Adauga limita maxima`);
+
+var i = lowerLimit;
 
 do {
   i++;
-  console.log(i);
 
-  if (i === 50) {
-    break;
+  if (i % multiplicator === 0) {
+    console.log(i);
   }
-} while (i < 100);
+} while (i < upperLimit);
