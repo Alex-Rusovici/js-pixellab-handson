@@ -223,4 +223,16 @@ for (i = person.friends.length - 1; i >= 0; i--) {
 
 console.log(message);
 
-// for some reason, inca imi spune ca mai am de facut un exercitiu in care imi spune ca ar trebui chemata valoarea 5976, dar ... am facut toate exercitiile din prezentare
+console.warn(`Afiseaza suma anilor de nastere a prietenilor`);
+
+var sumFriendsBirthYear = 0;
+
+for (i = 0; i < person.friends.length; i++) {
+  sumFriendsBirthYear += 2022 - friend.age;
+}
+
+console.log(sumFriendsBirthYear.toString());
+
+// for some reason, inca imi spune ca mai am de facut un exercitiu in care imi spune ca ar trebui chemata valoarea 5976,
+// dar ... am facut toate exercitiile din prezentare
+// dar vad ca de fapt este vorba suma anilor de nastere a persoanelor
