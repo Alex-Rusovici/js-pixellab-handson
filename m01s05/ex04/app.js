@@ -29,3 +29,38 @@ const calculateSquareArea = (width) => {
 
   return squareArea;
 };
+
+console.warn(
+  `Calculeaza suprafata de tapet necesara pentru o camera de 12 pe 9 m cu tavan inalt de 2.5m,
+  stiind ca exista o usa de 3 pe 2 si o suprafata de ferestre de 3 pe 2.
+  “Suprafata de tapet necesara este xxx metri patrati.”`,
+);
+
+const longWallSurface2 = calculateRectangleArea(12, 2.5);
+const shortWallSurface2 = calculateRectangleArea(9, 2.5);
+const totalWallSurface2 = (longWallSurface2 + shortWallSurface2) * 2;
+const openingSurface = calculateRectangleArea(3, 2);
+
+const wallpaperSurface2 = totalWallSurface2 - openingSurface * 2;
+
+console.log(
+  `Suprafata de tapet necesara este: ${wallpaperSurface2} metri patrati.`,
+);
+
+console.warn(
+  `Creaza o functie wrapper pentru calculateRectangleArea() care sa primeasca 4 parametrii:
+  latimea si lungimea unui dreptunghi initial, apoi latimea si lungimea altui dreptunghi.
+  Functia se va numi aggregateSurfaceArea().`,
+);
+
+const aggregateSurfaceArea = (length1, width1, length2, width2) => {
+  const aggregateArea =
+    calculateRectangleArea(length1, width1) +
+    calculateRectangleArea(length2, width2);
+
+  return aggregateArea;
+};
+
+console.log(aggregateSurfaceArea(48, 92, 51, 102));
+
+// functioneaza ... dar ... pare ... gresit :))
