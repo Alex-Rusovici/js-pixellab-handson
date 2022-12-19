@@ -26,6 +26,7 @@ removeEventButton.addEventListener('click', () => {
 const homeworkButton = document.getElementById('home-event');
 
 let message = '';
+const paragraphElement = document.getElementById('paragraph');
 
 function clickEvent() {
   const userAge = prompt(`Cati ani ai?`);
@@ -33,6 +34,8 @@ function clickEvent() {
   message += `Ai ${userAge} ani.`;
 
   console.log(message);
+
+  paragraphElement.innerText = message;
 }
 
 // Salveaza rezultatul metodei prompt intr-o variabila
@@ -44,7 +47,6 @@ homeworkButton.addEventListener('click', clickEvent);
 // stocheaza elementul intr-o variabila (paragraphElement),
 // apoi folosind innerText, afiseaza mesajul de mai devreme in acest paragraf.
 
-const paragraphElement = document.getElementById('paragraph');
 paragraphElement.innerText = message;
 
 // nu inteleg de ce nu merge sa imi scrie in paragraf .. si nu stiu ce nu merge
