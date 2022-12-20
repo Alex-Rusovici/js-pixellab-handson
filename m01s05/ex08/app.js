@@ -46,7 +46,3 @@ homeworkButton.addEventListener('click', clickEvent);
 // Creaza un paragraf cu idul message si folosind getElementById(‘message’)
 // stocheaza elementul intr-o variabila (paragraphElement),
 // apoi folosind innerText, afiseaza mesajul de mai devreme in acest paragraf.
-
-paragraphElement.innerText = message;
-
-// nu inteleg de ce nu merge sa imi scrie in paragraf .. si nu stiu ce nu merge
