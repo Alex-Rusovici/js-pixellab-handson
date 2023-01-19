@@ -41,7 +41,7 @@ for (let i = 0; i < person.friends.length; i++) {
   for (let j = person.friends.length - 1; j >= 0; j--) {
     const diff = Math.abs(person.friends[i].age - person.friends[j].age);
 
-    if (diff === 0) {
+    if (i === j) {
       continue;
     }
 
