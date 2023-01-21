@@ -31,7 +31,7 @@ class Car {
   stop() {
     this.speed = 0;
 
-    console.log(this.speed);
+    //    console.log(this.speed);
   }
 
   setSpeed(speed = 0) {
@@ -87,4 +87,35 @@ const audi = new Car('Audi', 'black', 4, 50);
 
 const opel = new Car('Opel', 'red', 4, 3);
 
+// Adauga cele doua variabile (opel si audi) intr-un array numit cars. (var cars = [opel, audi])
+
 const cars = [audi, opel];
+
+// “Masina era marca make si se deplasa cu speed km/h.” - cu forEach
+
+cars.forEach(function (car) {
+  console.log(
+    `Masina era marca ${car.make} si se deplasa cu ${car.speed} km/h.`,
+  );
+});
+
+audi.decelerate();
+audi.decelerate();
+audi.decelerate();
+audi.decelerate();
+audi.decelerate();
+
+opel.decelerate();
+opel.decelerate();
+opel.decelerate();
+opel.decelerate();
+opel.decelerate();
+
+cars.forEach(function (car) {
+  console.log(`Viteza noua este de ${car.speed} km/h.`);
+});
+
+// this kills me inside. inteleg ce cauta PixelTab, dar in momentul asta nu stiu exact cum as putea sa trec peste.
+// am incercat si cu slice reverse reverse in speranta ca ... splice clones and reverse mutates
+// dar tot nu a mers, strica cumva PixelTab-ul
+// dar in consola este ok :-/
