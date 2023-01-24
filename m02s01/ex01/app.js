@@ -97,21 +97,10 @@ cars.forEach(function (car) {
   console.log(
     `Masina era marca ${car.make} si se deplasa cu ${car.speed} km/h.`,
   );
-});
 
-audi.decelerate();
-audi.decelerate();
-audi.decelerate();
-audi.decelerate();
-audi.decelerate();
-
-opel.decelerate();
-opel.decelerate();
-opel.decelerate();
-opel.decelerate();
-opel.decelerate();
-
-cars.forEach(function (car) {
+  for (i = 0; i < 5; i++) {
+    car.decelerate();
+  }
   console.log(`Viteza noua este de ${car.speed} km/h.`);
 });
 

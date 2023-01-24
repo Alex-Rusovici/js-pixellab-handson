@@ -13,13 +13,11 @@ class Vehicle {
   }
 
   accelerate() {
-    this.speed++;
-    this.displaySpeed();
+    this.setSpeed(this.speed + 1);
   }
 
   decelerate() {
-    this.speed--;
-    this.displaySpeed();
+    this.setSpeed(this.speed - 1);
   }
 
   setSpeed(speed = 0) {
@@ -61,3 +59,18 @@ const bike = new Bicycle('Pegas', 'red', 8, 20);
 
 // bike - set speed 8
 bike.setSpeed(8);
+
+// decelerate bike 3 times
+for (i = 0; i < 3; i++) {
+  bike.decelerate();
+}
+
+// create tricycle
+
+class Tricycle extends Vehicle {
+  constructor(make, color, speed, topSpeed) {
+    super(make, color, 3, speed, topSpeed, 0);
+  }
+}
+
+const tryke = new Tricycle('Tryke', 'red', 2, 9, -2);
