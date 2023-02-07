@@ -4,15 +4,27 @@ class Car {
     this.color = color;
     this.wheels = wheels;
     this.speed = speed;
+    this.topSpeed = 150;
+    this.topReverseSpeed = -80;
   }
 
-  accelerate() {
-    this.speed = this.speed + 1;
+  // accelerate si decelerate sa primeasca un coeficient
+  accelerate(deltaSpeed = 1) {
+    this.speed = this.speed + deltaSpeed;
+
+    return this;
   }
 
-  decelerate() {
-    this.speed = this.speed - 1;
+  decelerate(deltaSpeed = 1) {
+    this.speed = this.speed - deltaSpeed;
+
+    return this;
   }
+  // tema:
+  // implementarea metodei setSpeed() + protectiile de supra si subaccelerare + chaining
+  // refactorizarea metodelor accelerate si decelerate pentru a folosi metoda setSpeed()
 }
 
 const audi = new Car('Audi', 'black', 4, 50);
+
+audi.accelerate();
