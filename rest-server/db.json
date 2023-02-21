@@ -1,3 +1,53 @@
 {
-  "persons": []
+  "persons": [
+    {
+      "name": "Carol",
+      "surname": "Carolson",
+      "skills": [
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "name": "Steven",
+      "surname": "Stevenson",
+      "skills": [
+        "JavaScript",
+        "CSS"
+      ]
+    },
+    {
+      "name": "Larry",
+      "surname": "Larryson",
+      "skills": [
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
+      "id": "500286",
+      "name": "Alex",
+      "surname": "Rusovici",
+      "skills": [
+        "jQuery",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "id": "698624",
+      "name": "Anca ",
+      "surname": "Cuculici",
+      "skills": [
+        "Figma"
+      ]
+    },
+    {
+      "id": "774684",
+      "name": "Ioana",
+      "surname": "Cuculici",
+      "skills": [
+        "HTML"
+      ]
+    }
+  ]
 }
